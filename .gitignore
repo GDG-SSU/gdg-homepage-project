@@ -30,6 +30,7 @@ pip-log.txt
 # PyCharm
 .idea/*
 venv/*
+gdg_flask/.idea/
 .idea/libraries/sass_stdlib.xml
 
 # Distribution
