@@ -4,7 +4,7 @@ from gdg_flask import app
 
 @app.route('/')
 def hello_world():
-    return "<a href='/temp12'>링크</a>"
+    return render_template("base/layout.html")
 
 
 @app.route('/temp12')
