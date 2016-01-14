@@ -4,7 +4,7 @@ from gdg_flask import app
 
 @app.route('/')
 def hello_world():
-    return render_template("base/layout.html")
+    return render_template("home.html")
 
 
 @app.route('/temp12')
