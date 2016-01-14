@@ -29,6 +29,7 @@ pip-log.txt
 
 # PyCharm
 .idea/*
+venv/*
 .idea/libraries/sass_stdlib.xml
 
 # Distribution
