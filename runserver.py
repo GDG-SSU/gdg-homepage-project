@@ -3,13 +3,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+from gdg_flask import app
 
 
 if __name__ == '__main__':
     app.run(port=5002)
 
-from gdg_flask import app
