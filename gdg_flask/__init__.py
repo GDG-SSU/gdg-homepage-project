@@ -6,6 +6,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+
 app.config.from_object('gdg_flask.settings.Develop')
 db = SQLAlchemy(app)
 manager = Manager(app)
