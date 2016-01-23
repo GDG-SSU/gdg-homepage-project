@@ -1,3 +1,7 @@
 .gdg-navbar{
     background-color: #088A29;
+    border-color: #0BA008;
+}
+.gdg-navbar-brand{
+    padding-top:5px;
 }
