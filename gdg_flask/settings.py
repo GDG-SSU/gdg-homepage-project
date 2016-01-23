@@ -30,7 +30,7 @@ class Production(Config):
 
 
 class Develop(Config):
-    debug = True
+    DEBUG = True
     CSRF_ENABLED = False
     ADMIN = "jackok12@gmail.com"
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=100)
