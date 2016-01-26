@@ -1,3 +1,3 @@
 Every Files in the Folder(gdg-base) is called any article.
 
-These files is always called on the application.
+These files are always called on the application.
