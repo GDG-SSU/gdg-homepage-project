@@ -17,6 +17,7 @@ class Config(object):
     SECRET_KEY = "_kindlaw_at_genus_"
     debug = False
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=50)
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://gdg_ssu@52.11.192.101/GDGSSU?charset=utf8"
     # SQLALCHEMY_TRACK_MODIFICATIONS = True
     # UPLOAD_FOLDER =
 

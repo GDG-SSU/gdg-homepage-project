@@ -8,6 +8,10 @@ def home():
 
 
 
+@app.route('/helper')
+def helper():
+    return render_template("gdg-article/help-desk/gdg-ssu-help.html")
+
 # @app.route('/temp12')
 # def temp12():
 #     return render_template("base/layout.html")
