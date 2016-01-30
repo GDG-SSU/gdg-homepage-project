@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for user in test_db %}
+        <li>
+            {{ user.user_id }}
+            {{ user.user_pw }}
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

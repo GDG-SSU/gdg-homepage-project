@@ -1,0 +1,19 @@
+{% macro render_field(field, catch_kwargs=true) %}
+    <!--매개변수를 받음.-->
+    <!--일련의 행동들을 묶어 놓은것
+    파이썬의 함수처럼 import해서 사용할 수 있따.-->
+    <div class="form-group{% if field.errors %} has-error{% endif %}">
+        <label class='form-label'for="{{ field.id }}">{{ field.label }}</label>
+        {{ field(**kwargs) }}
+        <!--wtforms 공식 사이트에서 확인할수 있따.-->
+        {% if field.errors %}
+            <div class="help-block">
+                <ul>
+                    {% for error in field.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

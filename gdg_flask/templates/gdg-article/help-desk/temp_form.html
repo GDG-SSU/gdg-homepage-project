@@ -1,0 +1,23 @@
+{% extends 'gdg-base/layout.html' %}
+{% block article %}
+
+
+    <article style="margin-top: 100px;">
+        <div class="contents-wrap">
+            <div class='user_join'>
+                <form role="form" method="post" style="margin:auto; text-align:center">
+                    {{ form.hidden_tag() }} <!--관용적이래-->
+                    {% from "gdg-article/help-desk/form_field.html" import render_field %}
+                    {% for field in form if field.widget.input_type != 'hidden' %}
+                        {{ render_field(field, class="active") }}
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-default">회원가입</button>
+                </form>
+            </div>
+        </div>
+
+    </article>
+
+
+{% endblock %}
