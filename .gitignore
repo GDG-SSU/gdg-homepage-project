@@ -32,11 +32,11 @@ pip-log.txt
 */.idea/*
 */.idea/
 
-venv/*
-
-venv
+#venv/*
+#
+#venv
 gdg_flask/.idea/
-gdg_flask/settings.py
+#gdg_flask/settings.py
 .idea/libraries/sass_stdlib.xml
 
 # Distribution
