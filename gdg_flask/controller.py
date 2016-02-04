@@ -1,6 +1,6 @@
-from flask import render_template, url_for, redirect, request
+from flask import render_template, url_for, redirect, request, jsonify
 from gdg_flask import app, db
-from gdg_flask.forms import UserForm
+from gdg_flask.forms import UserRegisterForm
 
 from .models import UserDB
 
@@ -8,6 +8,7 @@ from .models import UserDB
 @app.route('/')
 def home():
     return render_template("gdg-article/home.html")
+
 
 # URL Prefix '/about' is
 # about ourselves(gdg-ssu)
@@ -39,26 +40,44 @@ def about_recruits():
 # So, if you want to make URL and template resource about User Account
 # You have to post url Prefix '/account' and template resource path to '/templates/gdg-article/account/*'
 
-@app.route('/account/register', methods=['GET','POST'])
+@app.route('/account/register', methods=['GET', 'POST'])
 def account_register():
-    form = UserForm()
+    form = UserRegisterForm()
+    script_list = ["js/account/register.js"]
     if request.method == 'POST' and form.validate():
-        user= form.user_id
-    return render_template('gdg-article/account/register.html', form=form)
+        user = form.user_id
+    return render_template('gdg-article/account/register.html', form=form, script_list=script_list)
+
 
 @app.route('/account/login')
 def account_login():
     return render_template('gdg-article/account/login.html')
+
 
 @app.route('/account/logout')
 def account_logout():
     return redirect(url_for('home'))
 
 
+@app.route('/account/check/is_user_duplicate')
+def account_is_user_duplicate():
+    """
+    :return: result (Boolean)
+    if user is duplicated, result=True
+    else result=False
+    """
+    user_id = request.args.get('user_id')
+
+    if UserDB.query.filter_by(user_id=user_id).all():
+        result = True
+    else:
+        result = False
+    return jsonify(result=result)
+
+
 @app.route('/helper')
 def helper():
     return render_template("gdg-article/help-desk/gdg-ssu-help.html")
-
 
 
 @app.route('/test')
@@ -80,7 +99,7 @@ def test12():
 
 @app.route('/tempform', methods=['GET', 'POST'])
 def tempForm():
-    form = UserForm()
+    form = UserRegisterForm()
     if request.method == 'POST' and form.validate():
         print('forms ok')
     else:

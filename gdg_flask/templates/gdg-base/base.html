@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="{{ url_for('static',filename="css/gdg-nav.css") }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/gdg-article.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/sticky-footer.css') }}">
-
+    <!-- jquery add가 필요해서-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 
 </head>
@@ -33,17 +34,21 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
 <script src="{{ url_for('static', filename="js/bootstrap.js") }}"></script>
-<script src="{{ url_for('static', filename="js/catcher.js") }}"></script>
+
+{# getJson과 중복이 발생하여 임시로 지웠습니다. #}
+<!--<script src="{{ url_for('static', filename="js/catcher.js") }}"></script>-->
 
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="{{ url_for('static', filename='js/holder.min.js') }}"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="{{ url_for('static',filename='js/ie10-viewport-bug-workaround.js') }}"></script>
 
-
+{% for script in script_list %}
+    <script src="{{ url_for('static',filename=script) }}"></script>
+{% endfor %}
 
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg>
 
