@@ -16,13 +16,20 @@ class UserDB(BaseModel):
     __tablename__= "user_table"
     user_id = db.Column(db.String(30))
     user_pw = db.Column(db.String(255))
+    # 0: admin, 1: gdg_member, 2: another man
     permission = db.Column(db.SMALLINT(), default=1)
 
 
+class GdgHelpDesk(BaseModel):
+    """
+        gdg_help_desk service.
+        A man needing help about IT Solutions post that board.
 
-# class GdgHelpDesk(BaseModel):
-#     # 유저로 저장할지 안정했다.
-#     __tablename__ = "t_gdg_help_desk"
-#     help_title = db.Column(db.String(200))
-#     help_content = db.Column(db.Text())
-#     author_address = db.Column(db.String(15))
+    """
+    __tablename__ = "t_gdg_help_desk"
+    help_title = db.Column(db.String(200))
+    help_content = db.Column(db.Text())
+    author_name = db.Column(db.String(20))
+    author_univ = db.Column(db.String(30))
+    author_major = db.Column(db.String(30))
+    author_ip = db.Column(db.String(15))
