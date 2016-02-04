@@ -4,7 +4,7 @@
         <div class="gdg-contents-base-wrap">
             <div class="container">
                 <div class="form-box">
-                    <form role="form" method="post">
+                    <form role="form" method="post" class="form-horizontal">
 
                         <!-- Form header for form title-->
                         <div class="form-header">
@@ -19,10 +19,15 @@
 
                             {% from "gdg-article/account/macro/bootstrap_account_form.html" import render_field %}
                             {% for field in form if field.widget.input_type != 'hidden' %}
-                                {{ render_field(field, class="validate") }}
+                                {{ render_field(field) }}
                             {% endfor %}
 
-                            <button type="submit" class="btn btn-default">회원가입</button>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-lg-offset-3 col-sm-10">
+                                    <button type="submit" class="btn btn-default">회원가입</button>
+                                </div>
+                            </div>
+
                         </div>
                     </form>
                 </div>

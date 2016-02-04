@@ -19,7 +19,7 @@ class UserDB(BaseModel):
     user_pw = db.Column(db.String(255))
     # Permission Table
     #  0: admin, 1: gdg_member, 2: another man (Guest)
-    permission = db.Column(db.SMALLINT(), default=1)
+    permission = db.Column(db.SMALLINT(), default=2)
 
 
 class GdgHelpDesk(BaseModel):
