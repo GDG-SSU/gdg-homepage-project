@@ -12,11 +12,13 @@ class BaseModel(db.Model):
     date_modified = db.Column(db.DateTime, default=db.func.current_timestamp(),
                               onupdate=db.func.current_timestamp())
 
+
 class UserDB(BaseModel):
-    __tablename__= "user_table"
+    __tablename__ = "user_table"
     user_id = db.Column(db.String(30))
     user_pw = db.Column(db.String(255))
-    # 0: admin, 1: gdg_member, 2: another man
+    # Permission Table
+    #  0: admin, 1: gdg_member, 2: another man (Guest)
     permission = db.Column(db.SMALLINT(), default=1)
 
 
@@ -24,7 +26,6 @@ class GdgHelpDesk(BaseModel):
     """
         gdg_help_desk service.
         A man needing help about IT Solutions post that board.
-
     """
     __tablename__ = "t_gdg_help_desk"
     help_title = db.Column(db.String(200))

@@ -9,7 +9,10 @@ from .models import UserDB
 def home():
     return render_template("gdg-article/home.html")
 
-
+# URL Prefix '/about' is
+# about ourselves(gdg-ssu)
+# So, if you want to make URL and template resource about GDG-SSU
+# You have to post url Prefix '/about' and template resource path to '/templates/gdg-article/about/*'
 @app.route('/about')
 @app.route('/about/intro')
 def about_intro():
@@ -31,10 +34,27 @@ def about_recruits():
     return render_template('gdg-article/about/recruits.html')
 
 
+# URL Prefix '/account' is
+# about User Account (login, logout, register.. and so on)
+# So, if you want to make URL and template resource about User Account
+# You have to post url Prefix '/account' and template resource path to '/templates/gdg-article/account/*'
+
+@app.route('/account/register')
+def account_register():
+    return render_template('gdg-article/account/register.html')
+
+@app.route('/account/login')
+def account_login():
+    return render_template('gdg-article/account/login.html')
+
+@app.route('/account/logout')
+def account_logout():
+    return redirect(url_for('home'))
+
+
 @app.route('/helper')
 def helper():
     return render_template("gdg-article/help-desk/gdg-ssu-help.html")
-
 
 
 
