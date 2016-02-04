@@ -39,9 +39,12 @@ def about_recruits():
 # So, if you want to make URL and template resource about User Account
 # You have to post url Prefix '/account' and template resource path to '/templates/gdg-article/account/*'
 
-@app.route('/account/register')
+@app.route('/account/register', methods=['GET','POST'])
 def account_register():
-    return render_template('gdg-article/account/register.html')
+    form = UserForm()
+    if request.method == 'POST' and form.validate():
+        user= form.user_id
+    return render_template('gdg-article/account/register.html', form=form)
 
 @app.route('/account/login')
 def account_login():

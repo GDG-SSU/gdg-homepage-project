@@ -2,5 +2,12 @@
     width:100%;
 }
 .gdg-contents-base-wrap{
-    margin-top:71px;
+    margin-top:131px;
+}
+div.divider{
+    height: 1px;
+    background-color: #e5e5e5;
+    overflow:hidden;
+    margin: 9px auto;
+    width:100%;
 }

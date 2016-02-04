@@ -1,0 +1,15 @@
+{% macro render_field(field, catch_kwargs=true) %}
+    <div class="input-field col s12">
+        {{ field(**kwargs) }}
+        <div id="is_valid_{{ field.name }}">
+            {% if field.errors %}
+
+                {% for error in field.errors %}
+                    <div class="warning">{{ error }}</div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        {{ field.label(for=field.id) }}
+    </div>
+{% endmacro %}
+

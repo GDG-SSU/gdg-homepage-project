@@ -29,16 +29,14 @@ pip-log.txt
 
 # PyCharm
 .idea/*
-<<<<<<< HEAD
 */.idea/*
 */.idea/
 
-=======
 venv/*
+
 venv
 gdg_flask/.idea/
 gdg_flask/settings.py
->>>>>>> eef704575e89b2cf8e1561e5718eb22046863a51
 .idea/libraries/sass_stdlib.xml
 
 # Distribution
