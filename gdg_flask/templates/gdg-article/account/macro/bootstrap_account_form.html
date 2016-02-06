@@ -1,17 +1,32 @@
 {% macro render_field(field, catch_kwargs=true) %}
-    <div class="form-group has-feedback">
-        {{ field.label(for=field.id,class="col-sm-2 col-lg-offset-1 control-label") }}
-        <div class="col-sm-6">
-            {{ field(class="form-control") }}
 
+    {% if field.errors %}
+        <div class="form-group has-feedback has-error">
+            {{ field.label(for=field.id,class="col-sm-2 col-lg-offset-1 control-label") }}
+            <div class="col-sm-6">
+                {{ field(class="form-control") }}
+                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            </div>
+            {#            {% for error in field.errors %}#}
+            {#                <div class="warning">{{ error }}</div>#}
+            {#            {% endfor %}#}
+            {#        {% endif %}#}
+        </div>
+    {% else %}
+        <div class="form-group has-feedback ">
+            {{ field.label(for=field.id,class="col-sm-2 col-lg-offset-1 control-label") }}
+            <div class="col-sm-6">
+                {{ field(class="form-control") }}
+
+            </div>
+
+            {#        {% if field.errors %}#}
+            {#            {% for error in field.errors %}#}
+            {#                <div class="warning">{{ error }}</div>#}
+            {#            {% endfor %}#}
+            {#        {% endif %}#}
         </div>
 
-        {% if field.errors %}
-
-            {% for error in field.errors %}
-                <div class="warning">{{ error }}</div>
-            {% endfor %}
-        {% endif %}
-    </div>
+    {% endif %}
 
 {% endmacro %}
