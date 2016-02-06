@@ -7,16 +7,19 @@ __author__ = 'Genus'
 class UserRegisterForm(Form):
     user_id = StringField(
             label=u'아이디',
-            validators=[validators.data_required('회원 아이디를 입력하세요')],
-            description="nono"
+            validators=[validators.length(min=6, max=20, message=u'아이디 형식을 지켜주세요.'),
+                        validators.regexp(regex=r"^[a-z0-9]*$", message=u'아이디 형식을 지켜주세요')],
+            description=u'아이디는 띄어쓰기 없이 영소문자/숫자만 가능합니다.'
     )
     password = PasswordField(
             label=u'비밀번호',
-            validators=[validators.Length(min=6, max=20, message=u'비밀번호의 형식을 지켜주세요')]
+            validators=[validators.length(min=4, max=30, message=u'비밀번호의 형식을 지켜주세요')],
+            description=u"4~30의 모든 문자"
     )
     confirm_password = PasswordField(
-        label=u'비밀번호 확인',
-        validators=[validators.data_required('비밀번호를 입력하여주세요.')]
+            label=u'비밀번호 확인',
+            validators=[validators.data_required('비밀번호를 입력하여주세요.')],
+            descriptiion=u"비밀번호를 한번 더 입력하여 주세요."
     )
 
 
