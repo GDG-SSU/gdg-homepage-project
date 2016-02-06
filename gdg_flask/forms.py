@@ -13,13 +13,13 @@ class UserRegisterForm(Form):
     )
     password = PasswordField(
             label=u'비밀번호',
-            validators=[validators.length(min=4, max=30, message=u'비밀번호의 형식을 지켜주세요')],
-            description=u"4~30의 모든 문자"
+            validators=[validators.Length(min=4, max=30, message=u'비밀번호의 형식을 지켜주세요')],
+            description=u"비밀번호는 4~30의 모든 문자가 가능합니다"
     )
     confirm_password = PasswordField(
             label=u'비밀번호 확인',
-            validators=[validators.data_required('비밀번호를 입력하여주세요.')],
-            descriptiion=u"비밀번호를 한번 더 입력하여 주세요."
+            validators=[validators.data_required('필드를 입력하여주세요.')],
+            description = u'보안을 위해 비밀번호 확인을 입력해주세요'
     )
 
 
