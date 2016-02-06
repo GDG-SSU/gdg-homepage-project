@@ -46,6 +46,7 @@ div.divider{
 }
 .members-row-developer .panel, .members-row-developer .panel-heading{
     background: none;
+    border: none;
 }
 /**
     members css end - by Junsu
