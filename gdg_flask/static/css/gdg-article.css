@@ -14,3 +14,39 @@ div.divider{
 .form-content{
     margin:20px auto;
 }
+
+/**
+    members css begin - by Junsu
+*/
+.members-header{
+    margin-bottom: 20px;
+}
+.members-header .header-image{
+    width: 100%;
+    height: 350px;
+}
+.members-label{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.members-row-developer{
+    background-image: url("/static/images/default-members-developer.gif");
+    padding-top: 20px;
+
+}
+.members-row-designer{
+    background-image: url("/static/images/default-members-designer.gif");
+    padding-top: 20px;
+
+}
+.members-row-planner{
+    background-image: url("/static/images/default-members-planner.jpg");
+    padding-top: 20px;
+
+}
+.members-row-developer .panel, .members-row-developer .panel-heading{
+    background: none;
+}
+/**
+    members css end - by Junsu
+*/
