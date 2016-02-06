@@ -47,3 +47,32 @@ div.divider{
 /**
     members css end - by Junsu
 */
+
+
+/*intro css begin*/
+.intro-header{
+    /*margin-left:120px;*/
+    font-size:50px;
+    color:darkgreen;
+}
+.intro-invite{
+    border:1px solid #cccccc;
+    height:800px;
+    width:800px;
+}
+.intro-image{
+    background-image: url("/static/images/intro-background.png") ;
+    width:798px;
+    height:400px;
+}
+.intro-contents{
+    padding: 100px 0 0 50px;
+    font-size:20px;
+    color: white;
+}
+.intro-history{
+    /*margin-left:920px;*/
+    border:1px solid #777777;
+    width:50px;
+    height:50px;
+}
