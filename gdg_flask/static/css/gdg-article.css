@@ -44,6 +44,10 @@ div.divider{
     padding-top: 20px;
 
 }
+.members-row-developer .panel, .members-row-developer .panel-heading{
+    background: none;
+    border: none;
+}
 /**
     members css end - by Junsu
 */
