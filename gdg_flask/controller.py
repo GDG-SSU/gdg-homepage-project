@@ -59,6 +59,29 @@ def account_logout():
     return redirect(url_for('home'))
 
 
+@app.route('/account/check/field')
+def account_registerForm_check():
+    form = UserRegisterForm()
+
+    field_id = request.args.get('field_id')
+    field_value = request.args.get('field_value')
+    form[field_id].data = field_value
+
+    result = form[field_id].validate(form)
+    # 만족시 True
+    # Boolean
+
+    return jsonify(result=result)
+
+@app.route('/fortest')
+def fortest():
+    result = db.engine.execute("SELECT * FROM user_table")
+    print(result)
+    print(result.fetchall())
+    for x in result:
+        print(x)
+    return 'hello'
+
 @app.route('/account/check/is_user_duplicate')
 def account_is_user_duplicate():
     """
