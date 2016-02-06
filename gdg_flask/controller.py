@@ -59,19 +59,18 @@ def account_logout():
     return redirect(url_for('home'))
 
 
-@app.route('/account/check/is_user_duplicate')
-def account_is_user_duplicate():
-    """
-    :return: result (Boolean)
-    if user is duplicated, result=True
-    else result=False
-    """
-    user_id = request.args.get('user_id')
+@app.route('/account/check/field')
+def account_registerForm_check():
+    form = UserRegisterForm()
 
-    if UserDB.query.filter_by(user_id=user_id).all():
-        result = True
-    else:
-        result = False
+    field_id = request.args.get('field_id')
+    field_value = request.args.get('field_value')
+    form[field_id].data = field_value
+
+    result = form[field_id].validate(form)
+    # 만족시 True
+    # Boolean
+
     return jsonify(result=result)
 
 

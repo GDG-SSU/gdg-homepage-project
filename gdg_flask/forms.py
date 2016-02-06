@@ -1,5 +1,7 @@
 from flask.ext.wtf import Form
 from wtforms import StringField, validators, PasswordField
+from .extensions.custom_validators import duplicate_check
+
 
 __author__ = 'Genus'
 
@@ -8,7 +10,8 @@ class UserRegisterForm(Form):
     user_id = StringField(
             label=u'아이디',
             validators=[validators.length(min=6, max=20, message=u'아이디 형식을 지켜주세요.'),
-                        validators.regexp(regex=r"^[a-z0-9]*$", message=u'아이디 형식을 지켜주세요')],
+                        validators.regexp(regex=r"^[a-z0-9]*$", message=u'아이디 형식을 지켜주세요'),
+                        duplicate_check('user_table','user_id',message=u'아이디가 중복됩니다.')],
             description=u'아이디는 띄어쓰기 없이 영소문자/숫자만 가능합니다.'
     )
     password = PasswordField(

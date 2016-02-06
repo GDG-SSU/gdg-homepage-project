@@ -5,42 +5,49 @@
  * Created by Genus on 2016. 1. 2..
  */
 $(document).ready(function(){
-
-    document.getElementById('user_id').addEventListener('blur', user_duplicate_check);
+    //바로 아랫것은 함수에 인자를 전달 못함
+    //document.getElementById('user_id').addEventListener('blur', account_check_field);
+    document.getElementById('user_id').addEventListener('blur', function(){
+        account_check_field(this);
+    });
 
 });
 
-function user_duplicate_check(){
-    var script_url = '/account/check/is_user_duplicate';
+function account_check_field(field,script_url){
+    if (!script_url){
+        var script_url = '/account/check/field';
+    }
+    else{
+        var script_url = script_url;
+    }
 
-    var input = document.getElementById('user_id');
-    var user_id = input.value;
-    console.log('b');
+
+    var field_id = field.id;
+    var field_value = field.value;
+
     $.getJSON(script_url, {
-        user_id: user_id
+        field_id: field_id,
+        field_value: field_value
     }, function(data) {
-        if(input.nextElementSibling){
-            input.nextElementSibling.remove();
-            input.parentNode.parentNode.classList.remove('has-success');
-            input.parentNode.parentNode.classList.remove('has-error');
+        if(field.nextElementSibling){
+            field.nextElementSibling.remove();
+            field.parentNode.parentNode.classList.remove('has-success');
+            field.parentNode.parentNode.classList.remove('has-error');
         }
         if(data.result){
-
-            var node = document.createElement('span');
-            node.setAttribute('class', 'glyphicon glyphicon-remove form-control-feedback');
-            node.setAttribute('aria-hidden', 'true');
-            input.parentNode.appendChild(node);
-            input.parentNode.parentNode.classList.add('has-error');
-        }
-        else{
             var node = document.createElement('span');
 
             node.setAttribute('class','glyphicon glyphicon-ok form-control-feedback');
             node.setAttribute('aria-hidden', 'true');
-            input.parentNode.appendChild(node);
-            input.parentNode.parentNode.classList.add('has-success');
-
-
+            field.parentNode.appendChild(node);
+            field.parentNode.parentNode.classList.add('has-success');
+        }
+        else{
+            var node = document.createElement('span');
+            node.setAttribute('class', 'glyphicon glyphicon-remove form-control-feedback');
+            node.setAttribute('aria-hidden', 'true');
+            field.parentNode.appendChild(node);
+            field.parentNode.parentNode.classList.add('has-error');
         }
 
     });
