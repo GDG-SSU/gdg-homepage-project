@@ -10,10 +10,17 @@ $(document).ready(function(){
     document.getElementById('user_id').addEventListener('blur', function(){
         account_check_field(this);
     });
+    document.getElementById('password').addEventListener('blur', function(){
+        account_check_field(this);
+    });
+    document.getElementById('confirm_password').addEventListener('blur', function(){
+        account_check_field(this, document.getElementById('password'));
+    });
 
 });
 
-function account_check_field(field,script_url){
+function account_check_field(field, field_bind, script_url){
+    //field_bind 가 없으면 undefined 처리
     if (!script_url){
         var script_url = '/account/check/field';
     }
@@ -25,9 +32,16 @@ function account_check_field(field,script_url){
     var field_id = field.id;
     var field_value = field.value;
 
+    if (field_bind){
+        var field_bind_id = field_bind.id;
+        var field_bind_value = field_bind.value
+    }
+
     $.getJSON(script_url, {
         field_id: field_id,
-        field_value: field_value
+        field_value: field_value,
+        field_bind_id: field_bind_id,
+        field_bind_value:field_bind_value
     }, function(data) {
         if(field.nextElementSibling){
             field.nextElementSibling.remove();

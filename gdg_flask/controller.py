@@ -65,6 +65,14 @@ def account_registerForm_check():
 
     field_id = request.args.get('field_id')
     field_value = request.args.get('field_value')
+
+    field_bind_id = request.args.get('field_bind_id')
+    field_bind_value = request.args.get('field_bind_value')
+
+
+    if field_bind_id and field_bind_value:
+        form[field_bind_id].data = field_bind_value
+
     form[field_id].data = field_value
 
     result = form[field_id].validate(form)
