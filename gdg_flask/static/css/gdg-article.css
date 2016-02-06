@@ -14,3 +14,9 @@ div.divider{
 .form-content{
     margin:20px auto;
 }
+
+/* members css begin */
+.members-header .header-image{
+    width: 100%;
+    height: 400px;
+}

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends "gdg-base/layout.html" %}
+{% block article %}
+    <div class="members-header">
+        <img class="header-image" src="{{ url_for('static',filename="images/default-header-img.jpg") }}" alt="">
+    </div>
+{% endblock %}
