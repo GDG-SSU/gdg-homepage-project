@@ -73,30 +73,6 @@ def account_registerForm_check():
 
     return jsonify(result=result)
 
-@app.route('/fortest')
-def fortest():
-    result = db.engine.execute("SELECT * FROM user_table")
-    print(result)
-    print(result.fetchall())
-    for x in result:
-        print(x)
-    return 'hello'
-
-@app.route('/account/check/is_user_duplicate')
-def account_is_user_duplicate():
-    """
-    :return: result (Boolean)
-    if user is duplicated, result=True
-    else result=False
-    """
-    user_id = request.args.get('user_id')
-
-    if UserDB.query.filter_by(user_id=user_id).all():
-        result = True
-    else:
-        result = False
-    return jsonify(result=result)
-
 
 @app.route('/helper')
 def helper():
