@@ -32,16 +32,22 @@ div.divider{
 .members-row-developer{
     background-image: url("/static/images/default-members-developer.gif");
     padding-top: 20px;
+    border-radius: 40px;
+    margin: 2px 0px;
 
 }
 .members-row-designer{
     background-image: url("/static/images/default-members-designer.gif");
     padding-top: 20px;
+    border-radius: 40px;
+    margin: 2px 0px;
 
 }
 .members-row-planner{
     background-image: url("/static/images/default-members-planner.jpg");
     padding-top: 20px;
+    border-radius: 40px;
+    margin: 2px 0px;
 
 }
 .members-row-designer .panel, .members-row-designer .panel-heading,
