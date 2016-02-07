@@ -44,7 +44,9 @@ div.divider{
     padding-top: 20px;
 
 }
-.members-row-developer .panel, .members-row-developer .panel-heading{
+.members-row-designer .panel, .members-row-designer .panel-heading,
+.members-row-planner .panel, .members-row-planner .panel-heading,
+.members-row-developer .panel, .members-row-developer .panel-heading {
     background: none;
     border: none;
 }

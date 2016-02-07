@@ -24,11 +24,12 @@ def about_intro():
 @app.route('/about/members')
 def about_members():
     list = []
-    list.append()
+    for i in range(10) :
+        member = {}
+        member['job'] = i
+        member['count'] = str(i)
+        list.append(member)
 
-
-    for item in range(10):
-        list.append(item)
     return render_template('gdg-article/about/members.html', list=list)
 
 
