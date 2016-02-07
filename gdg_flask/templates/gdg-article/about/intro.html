@@ -1,4 +1,20 @@
 {% extends "gdg-base/layout.html" %}
 {% block article %}
-    맴버 소개 화면입니다
+    <div class="members-header">
+        <img class="header-image" src="{{ url_for('static',filename="images/default-header-img.jpg") }}" alt="">
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="intro-header">GDG SSU?
+                <div class="intro-invite">
+                    <div class="intro-image">
+                        <p class="intro-contents">소개내용</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 intro-history">
+            history
+        </div>
+    </div>
 {% endblock %}

@@ -1,6 +1,7 @@
-from flask import render_template, url_for, redirect, request, jsonify
+from flask import render_template, url_for, redirect, request, jsonify, session
 from gdg_flask import app, db
 from gdg_flask.forms import UserRegisterForm
+from werkzeug.security import generate_password_hash
 
 from .models import UserDB
 
@@ -51,12 +52,24 @@ def account_register():
     form = UserRegisterForm()
     script_list = ["js/account/register.js"]
     if request.method == 'POST' and form.validate():
-        user = form.user_id
+        user_id = form.user_id.data
+        password = form.password.data
+        user = UserDB(
+            user_id=user_id,
+            user_pw=generate_password_hash(password)
+        )
+        db.session.add(user)
+        db.session.commit()
+        session['user_id']=user_id
+        session['permission']=user.permission
+
     return render_template('gdg-article/account/register.html', form=form, script_list=script_list)
 
 
 @app.route('/account/login')
 def account_login():
+    form = UserLoginForm()
+
     return render_template('gdg-article/account/login.html')
 
 
@@ -71,6 +84,13 @@ def account_registerForm_check():
 
     field_id = request.args.get('field_id')
     field_value = request.args.get('field_value')
+
+    field_bind_id = request.args.get('field_bind_id')
+    field_bind_value = request.args.get('field_bind_value')
+
+    if field_bind_id and field_bind_value:
+        form[field_bind_id].data = field_bind_value
+
     form[field_id].data = field_value
 
     result = form[field_id].validate(form)
