@@ -22,6 +22,7 @@ class UserDB(BaseModel):
     permission = db.Column(db.SMALLINT(), default=2)
 
 
+
 class GdgHelpDesk(BaseModel):
     """
         gdg_help_desk service.

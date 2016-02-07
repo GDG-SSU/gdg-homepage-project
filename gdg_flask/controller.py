@@ -22,7 +22,13 @@ def about_intro():
 
 @app.route('/about/members')
 def about_members():
-    return render_template('gdg-article/about/members.html')
+    list = []
+    list.append()
+
+
+    for item in range(10):
+        list.append(item)
+    return render_template('gdg-article/about/members.html', list=list)
 
 
 @app.route('/about/activities')
