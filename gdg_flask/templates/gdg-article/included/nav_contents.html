@@ -30,9 +30,12 @@
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url_for('account_register') }}">회원가입</a></li>
-                        <li><a href="{{ url_for('account_login') }}">로그인</a></li>
-
+                        {% if session.get('user_id') %}
+                            <li><a href="{{ url_for('account_logout') }}">로그아웃</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('account_register') }}">회원가입</a></li>
+                            <li><a href="{{ url_for('account_login') }}">로그인</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

@@ -76,18 +76,18 @@ def account_login():
         return redirect('home')
 
     form = UserLoginForm()
-    if request.method=='POST' and form.validate():
+    if request.method == 'POST' and form.validate():
         user_id = form.user_id.data
         password = form.password.data
 
-        sql_query = "SELECT * from user_table WHERE user_id=%s and is_active=True" % user_id
+        sql_query = "SELECT * from user_table WHERE user_id='%s' and is_active=True" % user_id
         sql_prx = db.engine.execute(sql_query)
-        user = sql_prx.fetch()
+        user = sql_prx.fetchone()
         sql_prx.close()
         if user is None:
-            flash(u'존재하지 않는 아이디입니다','errors')
+            flash(u'아이디 혹은 비밀번호가 틀렸습니다.','danger')
         elif not check_password_hash(user.password, password):
-            flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'errors')
+            flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'danger')
         else:
             session['user_id'] = user.user_id
             session['permission'] = user.permission
@@ -95,7 +95,7 @@ def account_login():
 
             db.session.commit()
             return redirect(url_for('home'))
-    return render_template('gdg-article/account/login.html')
+    return render_template('gdg-article/account/login.html',form=form)
 
 
 @app.route('/account/logout')
