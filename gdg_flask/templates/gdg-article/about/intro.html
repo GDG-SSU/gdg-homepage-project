@@ -3,18 +3,26 @@
     <div class="members-header">
         <img class="header-image" src="{{ url_for('static',filename="images/default-header-img.jpg") }}" alt="">
     </div>
-    <div class="row">
-        <div class="col-lg-8">
-            <div class="intro-header">GDG SSU?
-                <div class="intro-invite">
-                    <div class="intro-image">
-                        <p class="intro-contents">소개내용</p>
-                    </div>
+    <div class="container">
+        <div class="intro-header-text" style="margin-left:80px">GDG SSU?</div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="intro-invite-frame">
+                    <img src = "/static/images/intro-background.png" name="aaa">
+                    <!--<div class="intro-image">
+                        <p class="intro-contents-text">소개내용</p>
+                    </div>-->
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4 intro-history">
-            history
+            <div class="col-lg-4" style="margin:auto">
+                <div class="intro-buttons-frame" >
+                    <button type="button" class="btn btn-success btn-lg intro-button" onmouseover="aaa.src='/static/images/intro-background.png'">GDG SSU?</button>
+                    <button type="button" class="btn btn-success btn-lg intro-button" onmouseover="aaa.src='/static/images/GDG-SSU-black.png'">history</button>
+                    <button type="button" class="btn btn-success btn-lg intro-button">news</button>
+                    <button type="button" class="btn btn-success btn-lg intro-button">etc1</button>
+                    <button type="button" class="btn btn-success btn-lg intro-button">etc2</button>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
