@@ -20,6 +20,9 @@ class UserDB(BaseModel):
     # Permission Table
     #  0: admin, 1: gdg_member, 2: another man (Guest)
     permission = db.Column(db.SMALLINT(), default=2)
+    # is_unregister user (registered: is_active=True, unregisterd: is_active=False)
+    is_active = db.Column(db.Boolean(),default=True)
+    last_login = db.Column(db.DateTime(), default=db.func.current_timestamp())
 
 
 

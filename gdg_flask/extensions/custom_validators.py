@@ -16,6 +16,7 @@ class DuplicateCheck(object):
     def __call__(self, form, field):
         sql_query = "SELECT %s FROM %s WHERE %s='%s'" % (field.id, self.table_name, self.column_name, field.data)
 
+        # sql proxy
         sql_prx = db.engine.execute(sql_query)
         sql_result = sql_prx.fetchall()
 

@@ -1,9 +1,9 @@
-from flask import render_template, url_for, redirect, request, jsonify, session
+from flask import render_template, url_for, redirect, request, jsonify, session, flash
 from gdg_flask import app, db
-from gdg_flask.forms import UserRegisterForm
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from .models import UserDB
+from .forms import UserLoginForm,UserRegisterForm
 
 
 @app.route('/')
@@ -50,6 +50,9 @@ def about_recruits():
 
 @app.route('/account/register', methods=['GET', 'POST'])
 def account_register():
+    # session_check
+    if session.get('user_id'):
+        return redirect('home')
     form = UserRegisterForm()
     script_list = ["js/account/register.js"]
     if request.method == 'POST' and form.validate():
@@ -61,24 +64,46 @@ def account_register():
         )
         db.session.add(user)
         db.session.commit()
-        session['user_id']=user_id
-        session['permission']=user.permission
-
+        session['user_id'] = user_id
+        session['permission'] = user.permission
     return render_template('gdg-article/account/register.html', form=form, script_list=script_list)
 
 
-@app.route('/account/login')
+@app.route('/account/login', methods=['GET', 'POST'])
 def account_login():
-    form = UserLoginForm()
+    # session_check
+    if session.get('user_id'):
+        return redirect('home')
 
+    form = UserLoginForm()
+    if request.method=='POST' and form.validate():
+        user_id = form.user_id.data
+        password = form.password.data
+
+        sql_query = "SELECT * from user_table WHERE user_id=%s and is_active=True" % user_id
+        sql_prx = db.engine.execute(sql_query)
+        user = sql_prx.fetch()
+        sql_prx.close()
+        if user is None:
+            flash(u'존재하지 않는 아이디입니다','errors')
+        elif not check_password_hash(user.password, password):
+            flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'errors')
+        else:
+            session['user_id'] = user.user_id
+            session['permission'] = user.permission
+            user.last_login = db.func.now()
+
+            db.session.commit()
+            return redirect(url_for('home'))
     return render_template('gdg-article/account/login.html')
 
 
 @app.route('/account/logout')
 def account_logout():
+    session.clear()
     return redirect(url_for('home'))
 
-
+# /*/check/* 는 항상 검사등 check를 위해서 사용
 @app.route('/account/check/field')
 def account_registerForm_check():
     form = UserRegisterForm()
