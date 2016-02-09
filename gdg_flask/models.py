@@ -34,7 +34,10 @@ class GdgHelpDesk(BaseModel):
     __tablename__ = "t_gdg_help_desk"
     help_title = db.Column(db.String(200))
     help_content = db.Column(db.Text())
+
     author_name = db.Column(db.String(20))
     author_univ = db.Column(db.String(30))
     author_major = db.Column(db.String(30))
     author_ip = db.Column(db.String(15))
+    author_tel = db.Column(db.String(15))
+    article_password = db.Column(db.String(255))

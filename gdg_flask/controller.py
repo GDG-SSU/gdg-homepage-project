@@ -3,7 +3,7 @@ from gdg_flask import app, db
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .models import UserDB
-from .forms import UserLoginForm,UserRegisterForm
+from .forms import UserLoginForm,UserRegisterForm, HelpDeskForm
 
 
 @app.route('/')
@@ -66,6 +66,7 @@ def account_register():
         db.session.commit()
         session['user_id'] = user_id
         session['permission'] = user.permission
+        return redirect(url_for('home'))
     return render_template('gdg-article/account/register.html', form=form, script_list=script_list)
 
 
@@ -128,7 +129,8 @@ def account_registerForm_check():
 
 @app.route('/helper')
 def helper():
-    return render_template("gdg-article/help-desk/gdg-ssu-help.html")
+    form= HelpDeskForm()
+    return render_template("gdg-article/help-desk/gdg-ssu-help.html",form=form)
 
 
 @app.route('/test')
