@@ -127,10 +127,17 @@ def account_registerForm_check():
     return jsonify(result=result)
 
 
-@app.route('/helper')
-def helper():
+@app.route('/helper', methods=['GET', 'POST'])
+def helper_make():
     form= HelpDeskForm()
-    return render_template("gdg-article/help-desk/gdg-ssu-help.html",form=form)
+    return render_template("gdg-article/help-desk/make_helper.html", form=form)
+
+
+@app.route('/helper/lists')
+def helper_list():
+    form= HelpDeskForm()
+    return render_template("gdg-article/help-desk/gdg-ssu-help.html", form=form)
+
 
 
 @app.route('/test')
