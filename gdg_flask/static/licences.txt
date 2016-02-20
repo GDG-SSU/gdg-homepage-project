@@ -1,0 +1,4 @@
+static/bootstrap: Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+static/font-awesome: License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+static/js/jquery.min.js: Licensed under MIT (jquery.org/license)
+static/css/animate.min.css: Licensed under the MIT license
