@@ -1,0 +1,17 @@
+.logo{
+    background-image: url("../images/logos.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    width: 185px;
+    height: 60px;
+    margin-right: 20px;
+    margin-top:-20px;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    vertical-align: middle;
+}
+.logo.logo-light {
+    background-position: 0 -127px;
+}
