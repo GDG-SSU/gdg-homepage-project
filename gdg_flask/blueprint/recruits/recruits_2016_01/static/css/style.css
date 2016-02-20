@@ -181,8 +181,8 @@ header p {
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
 	background-color: #c1a618;
 }
-/* Services Section */
-#services-section {
+/* intro Section */
+#intro-section {
 	padding: 80px 0 100px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#032731+0,032e3a+20,032e3a+100,032731+100 */
 	background: rgb(3,39,49); /* Old browsers */
@@ -192,14 +192,14 @@ header p {
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', endColorstr='#032731', GradientType=0 ); /* IE6-9 */
 	color: #5b777f;
 }
-#services-section h4 {
+#intro-section h4 {
 	color: #81969c;
 	text-transform: uppercase;
 }
 .space {
 	margin-top: 40px;
 }
-#services-section i.fa {
+#intro-section i.fa {
 	font-size: 40px;
 	border: 0;
 	width: 100px;
@@ -211,12 +211,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', end
 	color: #f3ca27;
 	transition: all 0.5s;
 }
-#services-section .service:hover>i.fa {
+#intro-section .service:hover>i.fa {
 	background: #0b3540;
 }
 /* Gallery Section 
 ==============================*/
-#works-section {
+#portfolio-section {
 	padding: 80px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1a618+0,f1c40f+25,f1c40f+75,c1a618+100 */
 	background: rgb(193,166,24); /* Old browsers */
@@ -225,7 +225,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', end
 	background: linear-gradient(to bottom, rgba(193,166,24,1) 0%, rgba(241,196,15,1) 25%, rgba(241,196,15,1) 75%, rgba(193,166,24,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1a618', endColorstr='#c1a618', GradientType=0 ); /* IE6-9 */
 }
-#works-section i.fa {
+#portfolio-section i.fa {
 	font-size: 30px;
 	padding: 5px;
 	color: #f1c40f;
@@ -234,7 +234,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1a618', end
 	padding-bottom: 30px;
 	text-align: center;
 }
-#works-section hr {
+#portfolio-section hr {
 	background: #a9971c;
 }
 ul.cat li {
@@ -432,7 +432,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', end
 	padding-right: 5px;
 }
 /* Team Section */
-#team-section {
+#member-section {
 	padding: 80px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c1a618+0,f1c40f+25,f1c40f+75,c1a618+100 */
 	background: rgb(193,166,24); /* Old browsers */
@@ -441,10 +441,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', end
 	background: linear-gradient(to bottom, rgba(193,166,24,1) 0%, rgba(241,196,15,1) 25%, rgba(241,196,15,1) 75%, rgba(193,166,24,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1a618', endColorstr='#c1a618', GradientType=0 ); /* IE6-9 */
 }
-#team-section hr {
+#member-section hr {
 	background: #a9971c;
 }
-#team-section .item {
+#member-section .item {
 	padding: 0;
 	margin: 15px;
 	text-align: center;
@@ -455,20 +455,20 @@ img.img-circle.team-img {
 	border: 4px solid transparent;
 	transition: all 0.5s;
 }
-#team-section .thumbnail {
+#member-section .thumbnail {
 	background: transparent;
 	border: 0;
 }
-#team-section .thumbnail .caption {
+#member-section .thumbnail .caption {
 	padding: 9px;
 	color: #1c424d;
 }
-#team-section i.fa {
+#member-section i.fa {
 	font-size: 16px;
 	color: #faeaab;
 	margin-top: 10px;
 }
-#team-section i.fa:hover {
+#member-section i.fa:hover {
 	color: #1c424d;
 }
 .owl-theme .owl-controls .owl-page span {
