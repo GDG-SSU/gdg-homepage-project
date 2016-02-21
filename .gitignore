@@ -41,6 +41,14 @@ gdg_flask/settings.py
 
 # Distribution
 dist/*
+bower_components
+bower_components/*
+bower.json
+.bower.json
+.npmignore
+
+less
+scss
 Flask_Classy.egg-info/*
 
 # Mac stuff

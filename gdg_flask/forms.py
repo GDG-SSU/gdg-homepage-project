@@ -1,5 +1,6 @@
 from flask.ext.wtf import Form
-from wtforms import StringField, validators, PasswordField
+from flask.ext.wtf.file import FileField
+from wtforms import StringField, validators, PasswordField, TextAreaField
 from .extensions.custom_validators import duplicate_check
 
 __author__ = 'Genus'
@@ -24,6 +25,29 @@ class UserRegisterForm(Form):
             description=u'보안을 위해 비밀번호 확인을 입력해주세요'
     )
 
+class UserPortfolio(Form):
+    title = StringField(
+        label = u'프로젝트 이름',
+        validators=[validators.data_required(message=u'프로젝트 이름을 입력해주세요'),
+                    validators.length(min=1, max=30, message=u'프로젝트 이름은 최소 1자 최대 30자입니다.')],
+        description=u'프로젝트 이름을 입력해주세요.'
+    )
+    title_desc = StringField(
+        label=u'부연설명',
+        validators=[validators.length(max=50,message=u'최대 50자까지 가능합니다.')],
+        description=u'간략하게 설명해주세요.'
+    )
+    content = StringField(
+        label=u'내용',
+        validators=[validators.length(min=4, max=255, message=u'최소 4자 최대 255자만 가능합니다')],
+        description=u'상세하게 설명해주세요~!'
+    )
+    pictures = FileField(
+        label=u'이미지',
+        description=u'이미지를 첨부해주세용'
+    )
+
+
 
 class UserLoginForm(Form):
     user_id = StringField(
@@ -35,23 +59,41 @@ class UserLoginForm(Form):
             validators=[validators.data_required(message=u'비밀번호를 입력하여주세요.')]
     )
 
-    #
-    # class JoinForm(Form):
-    #     user_id = StringField(
-    #         label=u'회원 ID',
-    #         validators=[validators.data_required(u'회원 ID를 입력하시기 바랍니다.'),
-    #                     validators.Length(min=6, max=20, message=u'ID는 6~20자 입니다.')],  # length: 6~15
-    #         description={'placeholder': u'회원 ID를 입력하세요.'}
-    #     )
-    #     password = PasswordField(
-    #         label=u'패스워드',
-    #         validators=[validators.data_required(u'비밀번호를 입력하시기 바랍니다.'),
-    #                     validators.Length(min=6, max=20, message=u'비밀번호는 6~15자가 필요합니다.'),
-    #                     validators.EqualTo('confirm_password', message=u'비밀번호가 일치하지 않습니다.')],  # length: 6~15
-    #         description={'placeholder': u'비밀번호를 입력하세요.'}
-    #     )
-    #     confirm_password = PasswordField(
-    #         label=u'패스워드 확인',
-    #         validators=[validators.data_required(u'비밀번호를 한번 더 입력하시길 바랍니다.')],
-    #         description={'placeholder': u'비밀번호를 입력하세요.'}
-    #     )
+class HelpDeskForm(Form):
+    help_title = StringField(
+        label=u'제목',
+        validators = [validators.data_required(message=u'제목은 반드시 입력해주셔야 합니다.'),
+                      validators.length(min=5,max=200,message=u'제목은 최소 5자 최대 200자까지만 가능합니다.')],
+        description=u'제목'
+    )
+    help_content = TextAreaField(
+        label=u'내용',
+        validators=[validators.data_required(message=u'내용은 반드시 입력하여 주셔야 합니다.'),
+                    validators.length(min=10,message=u'최소 10자 이상을 입력하여 주셔야합니다.')],
+        description=u'내용'
+    )
+    author_name = StringField(
+        label=u'이름',
+        validators= [validators.data_required(message=u'이름을 입력하여주세요.')],
+        description=u'이름을 입력하여주세요. 다른 사람들은 볼 수 없습니다.'
+    )
+    author_univ = StringField(
+        label=u'소속 대학',
+        validators=[validators.data_required(message=u'소속을 입력해 주세요.')],
+        description=u'소속을 입력하여주세요'
+    )
+    author_major = StringField(
+        label=u'전공',
+        validators=[validators.data_required(message=u'전공을 입력하여주세요')],
+        description=u'전공을 입력하여주세요'
+    )
+    author_tel= StringField(
+        label=u'연락처',
+        validators=[validators.data_required(message=u'연락처를 입력하여주세요')],
+        description=u'연락처를 입력하여주세요. 컨택을 위해 필요합니다.'
+    )
+    password = PasswordField(
+        label=u'비밀번호',
+        validators=[validators.data_required(message=u'비밀번호를 입력하여주세요. 글 수정시 필요합니다')],
+        description=u'비밀번호를 입력하여주세요. 글 수정시 필요합니다'
+    )

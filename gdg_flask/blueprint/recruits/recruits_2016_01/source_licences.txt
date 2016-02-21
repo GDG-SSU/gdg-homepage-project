@@ -1,0 +1,20 @@
+static/bootstrap: Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+static/font-awesome: License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+static/js/jquery.min.js: Licensed under MIT (jquery.org/license)
+static/css/animate.min.css: Licensed under the MIT license
+
+
+recruits_2016_01.static/owl-carousel/owl-carousel.js: Licensed under MIT
+recruits_2016_01.static/css/style.css: Licensed under Tempo(http://www.templategarden.com/template/tempo-free-one-page-creative-template/) Free
+recruits_2016_01.static/js/modernizr.custom.js: Licensed under MIT & BSD
+recruits_2016_01.static/js/wow.min.js: Licensed MIT
+recruits_2016_01.static/js/main.js: Licensed under Tempo(http://www.templategarden.com/template/tempo-free-one-page-creative-template/) Free
+recruits_2016_01.static/js/SmoothScroll.js: Licensed MIT(https://gist.github.com/theroyalstudent/4e6ec834be19bf077298)
+recruits_2016_01.static/js/jquery.prettyPhoto.js: http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/
+- Licesed under “GPLv2”(http://www.gnu.org/licenses/gpl-2.0.html) or “reative Commons 2.5 license”(http://creativecommons.org/licenses/by/2.5/)
+
+
+
+recruits_2016_01.static/js/jquery.isotope.js: If you want to use commercially, you should requires one-time license fee
+- Non Commercial using:  Licensed by GPLv3
+- Commercial using: Licensed by http://isotope.metafizzy.co
