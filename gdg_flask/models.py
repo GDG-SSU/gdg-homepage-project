@@ -21,8 +21,34 @@ class UserDB(BaseModel):
     #  0: admin, 1: gdg_member, 2: another man (Guest)
     permission = db.Column(db.SMALLINT(), default=2)
     # is_unregister user (registered: is_active=True, unregisterd: is_active=False)
-    is_active = db.Column(db.Boolean(),default=True)
+    is_active = db.Column(db.Boolean(), default=True)
     last_login = db.Column(db.DateTime(), default=db.func.current_timestamp())
+
+class UserProfile(BaseModel):
+    __tablename__ = "user_profile"
+    name = db.Column(db.String(10))
+    picture = db.Column(db.String(255))
+    desc = db.Column(db.Text())
+    user_num = db.Column(db.ForeignKey('user_table.id'))
+    user = db.relationship('UserDB', backref=db.backref('profile', lazy='dynamic'))
+
+
+# Portfolio & User N:N
+portfolio_user = db.Table('member_portfolio',
+                          db.Column('portfolio_id', db.Integer, db.ForeignKey('portfolio.id')),
+                          db.Column('user_id', db.Integer, db.ForeignKey('user_table.id'))
+                          )
+
+
+# Set relationship For SQLAlchemy ORM
+class PortFolio(BaseModel):
+    __tablename__ = 'portfolio'
+    title = db.Column(db.String(30))
+    title_desc = db.Column(db.String(50))
+    content = db.Column(db.String(255))
+    picture = db.Column(db.String(255))
+    users = db.relationship('UserDB', secondary=portfolio_user,
+                            backref=db.backref('portfolio', lazy='dynamic'))
 
 
 

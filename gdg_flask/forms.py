@@ -1,4 +1,5 @@
 from flask.ext.wtf import Form
+from flask.ext.wtf.file import FileField
 from wtforms import StringField, validators, PasswordField, TextAreaField
 from .extensions.custom_validators import duplicate_check
 
@@ -23,6 +24,29 @@ class UserRegisterForm(Form):
             validators=[validators.equal_to('password')],
             description=u'보안을 위해 비밀번호 확인을 입력해주세요'
     )
+
+class UserPortfolio(Form):
+    title = StringField(
+        label = u'프로젝트 이름',
+        validators=[validators.data_required(message=u'프로젝트 이름을 입력해주세요'),
+                    validators.length(min=1, max=30, message=u'프로젝트 이름은 최소 1자 최대 30자입니다.')],
+        description=u'프로젝트 이름을 입력해주세요.'
+    )
+    title_desc = StringField(
+        label=u'부연설명',
+        validators=[validators.length(max=50,message=u'최대 50자까지 가능합니다.')],
+        description=u'간략하게 설명해주세요.'
+    )
+    content = StringField(
+        label=u'내용',
+        validators=[validators.length(min=4, max=255, message=u'최소 4자 최대 255자만 가능합니다')],
+        description=u'상세하게 설명해주세요~!'
+    )
+    pictures = FileField(
+        label=u'이미지',
+        description=u'이미지를 첨부해주세용'
+    )
+
 
 
 class UserLoginForm(Form):

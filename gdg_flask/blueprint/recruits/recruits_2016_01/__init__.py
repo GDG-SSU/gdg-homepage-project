@@ -10,3 +10,6 @@ def recruit_index():
     return render_template('recruits_contents.html')
 
 
+@recruits_201601.route('/profile/upload')
+def recruit_profile_upload():
+    return render_template('profile_upload.html')

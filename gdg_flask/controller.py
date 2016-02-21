@@ -87,7 +87,7 @@ def account_login():
         sql_prx.close()
         if user is None:
             flash(u'아이디 혹은 비밀번호가 틀렸습니다.','danger')
-        elif not check_password_hash(user.password, password):
+        elif not check_password_hash(user.user_pw, password):
             flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'danger')
         else:
             session['user_id'] = user.user_id
