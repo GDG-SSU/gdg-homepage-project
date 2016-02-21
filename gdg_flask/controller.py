@@ -3,7 +3,7 @@ from gdg_flask import app, db
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from .models import UserDB
-from .forms import UserLoginForm,UserRegisterForm, HelpDeskForm
+from .forms import UserLoginForm, UserRegisterForm, HelpDeskForm, UserProfileForm
 
 
 @app.route('/')
@@ -24,7 +24,7 @@ def about_intro():
 @app.route('/about/members')
 def about_members():
     list = []
-    for i in range(10) :
+    for i in range(10):
         member = {}
         member['job'] = i
         member['count'] = str(i)
@@ -59,8 +59,8 @@ def account_register():
         user_id = form.user_id.data
         password = form.password.data
         user = UserDB(
-            user_id=user_id,
-            user_pw=generate_password_hash(password)
+                user_id=user_id,
+                user_pw=generate_password_hash(password)
         )
         db.session.add(user)
         db.session.commit()
@@ -86,23 +86,39 @@ def account_login():
         user = sql_prx.fetchone()
         sql_prx.close()
         if user is None:
-            flash(u'아이디 혹은 비밀번호가 틀렸습니다.','danger')
+            flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'danger')
         elif not check_password_hash(user.user_pw, password):
             flash(u'아이디 혹은 비밀번호가 틀렸습니다.', 'danger')
         else:
             session['user_id'] = user.user_id
             session['permission'] = user.permission
-            user.last_login = db.func.now()
-
-            db.session.commit()
+            # Update user_table.last_login
+            db.engine.execute(
+                    "UPDATE user_table SET last_login=%s WHERE user_id='%s' and is_active=True " % (
+                    db.func.now(), user_id)
+            ).close()
             return redirect(url_for('home'))
-    return render_template('gdg-article/account/login.html',form=form)
+    return render_template('gdg-article/account/login.html', form=form)
 
 
 @app.route('/account/logout')
 def account_logout():
     session.clear()
     return redirect(url_for('home'))
+
+@app.route('/account/profile/register')
+def register_profile():
+    if not session.get('user_id') and session.get('permission') == 1:
+        return redirect(url_for('home'))
+
+    form=UserProfileForm()
+    if request.method == 'POST' and form.validate():
+        name = form.name.data
+        desc = form.desc.data
+        picture = form.picture.data
+
+
+    return render_template('gdg-article/account/profile/profile_register.html', form=)
 
 # /*/check/* 는 항상 검사등 check를 위해서 사용
 @app.route('/account/check/field')
@@ -129,15 +145,14 @@ def account_registerForm_check():
 
 @app.route('/helper', methods=['GET', 'POST'])
 def helper_make():
-    form= HelpDeskForm()
+    form = HelpDeskForm()
     return render_template("gdg-article/help-desk/make_helper.html", form=form)
 
 
 @app.route('/helper/lists')
 def helper_list():
-    form= HelpDeskForm()
+    form = HelpDeskForm()
     return render_template("gdg-article/help-desk/gdg-ssu-help.html", form=form)
-
 
 
 @app.route('/test')

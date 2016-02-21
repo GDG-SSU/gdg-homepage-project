@@ -33,6 +33,10 @@
                         </li>
                         {% if session.get('user_id') %}
                             <li><a href="{{ url_for('account_logout') }}">로그아웃</a></li>
+                            {% if session.get('permission') == 1 %}
+                                <li><a href="{{ url_for('register_profile') }}">프로필 등록</a></li>
+
+                            {% endif %}
                         {% else %}
                             <li><a href="{{ url_for('account_register') }}">회원가입</a></li>
                             <li><a href="{{ url_for('account_login') }}">로그인</a></li>
