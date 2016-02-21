@@ -15,3 +15,6 @@
 .logo.logo-light {
     background-position: 0 -127px;
 }
+ul, ol{
+    padding-left:0;
+}
