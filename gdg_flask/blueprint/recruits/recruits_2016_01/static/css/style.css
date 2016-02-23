@@ -183,7 +183,7 @@ header p {
 	background-color: #c1a618;
 }
 /* intro Section */
-#intro-section {
+#recruitment-section {
 	padding: 80px 0 100px 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#032731+0,032e3a+20,032e3a+100,032731+100 */
 	background: #537EC2;
@@ -194,14 +194,14 @@ header p {
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', endColorstr='#032731', GradientType=0 ); /* IE6-9 */
 	color: #5b777f;
 }
-#intro-section h4 {
+#recruitment-section h4 {
 	color: #81969c;
 	text-transform: uppercase;
 }
 .space {
 	margin-top: 40px;
 }
-#intro-section i.fa {
+#recruitment-section i.fa {
 	font-size: 40px;
 	border: 0;
 	width: 100px;
@@ -213,7 +213,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#032731', end
 	color: #f3ca27;
 	transition: all 0.5s;
 }
-#intro-section .service:hover>i.fa {
+#recruitment-section .service:hover>i.fa {
 	background: #0b3540;
 }
 /* Gallery Section 

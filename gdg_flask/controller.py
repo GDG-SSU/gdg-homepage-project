@@ -118,7 +118,7 @@ def register_profile():
         picture = form.picture.data
 
 
-    return render_template('gdg-article/account/profile/profile_register.html', form=)
+    return render_template('gdg-article/account/profile/profile_register.html', form=form)
 
 # /*/check/* 는 항상 검사등 check를 위해서 사용
 @app.route('/account/check/field')

@@ -10,10 +10,11 @@ eggs
 parts
 bin
 var
+이미지
 sdist
 develop-eggs
 .installed.cfg
-
+.psd
 # Installer logs
 pip-log.txt
 
