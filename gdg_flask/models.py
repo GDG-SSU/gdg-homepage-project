@@ -15,6 +15,7 @@ class BaseModel(db.Model):
 
 class UserDB(BaseModel):
     __tablename__ = "user_table"
+
     user_id = db.Column(db.String(30))
     user_pw = db.Column(db.String(255))
     # Permission Table
@@ -24,6 +25,10 @@ class UserDB(BaseModel):
     is_active = db.Column(db.Boolean(), default=True)
     last_login = db.Column(db.DateTime(), default=db.func.current_timestamp())
 
+    def __str__(self):
+        return "User <%s>" % self.user_id
+
+
 class UserProfile(BaseModel):
     __tablename__ = "user_profile"
     name = db.Column(db.String(10))
@@ -31,6 +36,9 @@ class UserProfile(BaseModel):
     desc = db.Column(db.Text())
     user_num = db.Column(db.ForeignKey('user_table.id'))
     user = db.relationship('UserDB', backref=db.backref('profile', lazy='dynamic'))
+
+    def __str__(self):
+        return "Profile <%s>" % self.user
 
 
 # Portfolio & User N:N
@@ -49,7 +57,6 @@ class PortFolio(BaseModel):
     picture = db.Column(db.String(255))
     users = db.relationship('UserDB', secondary=portfolio_user,
                             backref=db.backref('portfolio', lazy='dynamic'))
-
 
 
 class GdgHelpDesk(BaseModel):

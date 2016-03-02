@@ -243,8 +243,9 @@ ul.cat li {
 	display: inline-block;
 }
 ol.type li {
+	padding-left:3px;
+	padding-right:3px;
 	display: inline-block;
-	margin-left: 20px;
 }
 ol.type li a {
 	color: #51633d;
@@ -647,3 +648,25 @@ label {
 	padding: 22% 10%;
 }
 }
+.cgr-filter{
+	margin:auto;
+
+}
+.cgr-filter>li{
+	font-size:0.6em;
+	padding-left:0;
+	padding-right:0;
+
+}
+.cgr-filter>li>a{
+	width:100%;
+}
+
+
+@media (min-width: 768px) {
+ol.type li{
+	padding-left:15px;
+	padding-right:15px;
+}
+}
+

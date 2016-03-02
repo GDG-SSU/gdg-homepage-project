@@ -2,10 +2,12 @@ from flask import render_template, url_for, redirect, request, jsonify, session,
 from gdg_flask import app, db
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# customization
 from .models import UserDB
 from .forms import UserLoginForm, UserRegisterForm, HelpDeskForm, UserProfileForm
 
 
+# router
 @app.route('/')
 def home():
     return render_template("gdg-article/home.html")
