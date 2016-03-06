@@ -1,7 +1,5 @@
 from flask import Blueprint, render_template
 
-from .python_modules.parsing import FileParser
-
 
 # import current_app models
 from gdg_flask.models import UserProfile
