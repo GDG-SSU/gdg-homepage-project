@@ -2,7 +2,6 @@ import os
 
 from flask import render_template, url_for, redirect, request, jsonify, session, flash, send_from_directory
 from gdg_flask import app, db
-from gdg_flask.blueprint.recruits.recruits_2016_01 import FileParser
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # customization
