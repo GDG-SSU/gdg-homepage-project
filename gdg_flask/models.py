@@ -31,14 +31,40 @@ class UserDB(BaseModel):
 
 class UserProfile(BaseModel):
     __tablename__ = "user_profile"
-    name = db.Column(db.String(10))
+    name = db.Column(db.String(20))
+    company = db.Column(db.String(50))
+    title = db.Column(db.String(50))
     picture = db.Column(db.String(255))
     desc = db.Column(db.Text())
+
     user_num = db.Column(db.ForeignKey('user_table.id'))
     user = db.relationship('UserDB', backref=db.backref('profile', lazy='dynamic'))
 
     def __str__(self):
-        return "Profile <%s>" % self.user
+        return "Profile <%s : %s>" % (self.user, self.name)
+
+
+class ProfileRibbon(BaseModel):
+    __tablename__ = 'profile_ribbon'
+    abbr = db.Column(db.String(50))
+    title = db.Column(db.String(50))
+    link = db.Column(db.String(255))
+    profile_id = db.Column(db.ForeignKey('user_profile.id'))
+    user_profile = db.relationship('UserProfile', backref=db.backref('ribbons'))
+
+    def __str__(self):
+        return "Profile Ribbon <%s : %s>" % (self.abbr, self.user_profile.name)
+
+
+class ProfileSocial(BaseModel):
+    __tablename__ = 'profile_social'
+    name = db.Column(db.String(30))
+    link = db.Column(db.String(255))
+    profile_id = db.Column(db.ForeignKey('user_profile.id'))
+    user_profile = db.relationship('UserProfile', backref=db.backref('socials'))
+
+    def __str__(self):
+        return "Profile Ribbon <%s : %s>" % (self.name, self.user_profile.name)
 
 
 # Portfolio & User N:N

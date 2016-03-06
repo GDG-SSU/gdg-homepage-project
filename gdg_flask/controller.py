@@ -1,9 +1,12 @@
-from flask import render_template, url_for, redirect, request, jsonify, session, flash
+import os
+
+from flask import render_template, url_for, redirect, request, jsonify, session, flash, send_from_directory
 from gdg_flask import app, db
+from gdg_flask.blueprint.recruits.recruits_2016_01 import FileParser
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # customization
-from .models import UserDB
+from .models import UserDB, ProfileSocial, ProfileRibbon, PortFolio, UserProfile
 from .forms import UserLoginForm, UserRegisterForm, HelpDeskForm, UserProfileForm
 
 
@@ -97,7 +100,7 @@ def account_login():
             # Update user_table.last_login
             db.engine.execute(
                     "UPDATE user_table SET last_login=%s WHERE user_id='%s' and is_active=True " % (
-                    db.func.now(), user_id)
+                        db.func.now(), user_id)
             ).close()
             return redirect(url_for('home'))
     return render_template('gdg-article/account/login.html', form=form)
@@ -108,19 +111,20 @@ def account_logout():
     session.clear()
     return redirect(url_for('home'))
 
+
 @app.route('/account/profile/register')
 def register_profile():
     if not session.get('user_id') and session.get('permission') == 1:
         return redirect(url_for('home'))
 
-    form=UserProfileForm()
+    form = UserProfileForm()
     if request.method == 'POST' and form.validate():
         name = form.name.data
         desc = form.desc.data
         picture = form.picture.data
 
-
     return render_template('gdg-article/account/profile/profile_register.html', form=form)
+
 
 # /*/check/* 는 항상 검사등 check를 위해서 사용
 @app.route('/account/check/field')
@@ -184,6 +188,87 @@ def tempForm():
 
     return render_template("gdg-article/help-desk/temp_form.html", form=form)
 
-# @app.route('/temp12')
-# def temp12():
-#     return render_template("base/layout.html")
+
+@app.route('/media/<filename>')
+def media(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
+
+
+@app.route('/media/profile/<profilename>')
+def get_profile(profilename):
+    profile_path = app.config['UPLOAD_FOLDER'] + '/profile/'
+
+    return send_from_directory(profile_path, profilename)
+
+
+# yaml 파일 옮기려고 임시로..
+# 참조용으로 내비뒀습니다
+"""
+@app.route('/profile/upload')
+def yml_profile_upload():
+    # 현재 앱에 sqlalcehmy 객체
+
+    directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    fp = FileParser(directory + '/gdg_flask/media/speakers.yml').ymlReading()
+    social_set = ['google-plus', 'facebook', 'linkedin', 'github']
+    i = 0
+    for profile in fp:
+        i += 1
+        p_name = profile.get('name')
+        if UserProfile.query.filter_by(name=p_name).first():
+            continue
+        p_company = profile.get('company')
+        p_title = profile.get('title')
+        p_picture = profile.get('thumbnailUrl')
+        p_bio = profile.get('bio')
+        p_ribbons = profile.get('ribbon')
+        p_socials = profile.get('social')
+
+        profile = UserProfile(
+                name=p_name,
+                company=p_company,
+                title=p_title,
+                picture=p_picture,
+                desc=p_bio
+        )
+        db.session.add(profile)
+        print(str(i)+ "ing")
+
+        if p_ribbons:
+            l = 0
+            for ribbon in p_ribbons:
+                ribbon_title = ribbon.get('title')
+                ribbon_abbr = ribbon.get('abbr')
+                ribbon_link = ribbon.get('url')
+                profile_ribbon = ProfileRibbon(
+                        title=ribbon_title,
+                        abbr=ribbon_abbr,
+                        link=ribbon_link,
+                        user_profile=profile
+                )
+                db.session.add(profile_ribbon)
+                print(str(i) + "-r-" + str(l))
+                l += 1
+
+        if p_socials:
+            l = 0
+            for social in p_socials:
+                social_name = social.get('name')
+                social_link = social.get('link')
+                profile_social = ProfileSocial(
+                        name=social_name,
+                        link=social_link,
+                        user_profile=profile
+                )
+                if social_name not in social_set:
+                    print('없는 이름입니다 . %s' % social_name)
+                db.session.add(profile_social)
+                print(str(i) + "-s-" + str(l))
+                l += 1
+
+        print(str(i) + "  finished")
+        db.session.commit()
+
+    return 'OK'
+"""

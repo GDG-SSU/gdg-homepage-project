@@ -1,15 +1,20 @@
 from flask import Blueprint, render_template
-from jinja2 import TemplateNotFound
+
+from .python_modules.parsing import FileParser
+
+
+# import current_app models
+from gdg_flask.models import UserProfile
+
 
 recruits_201601 = Blueprint('recruits_201601', __name__, template_folder='templates', static_folder='static',
                             url_prefix='/about/recruits/201601')
 
 
+
 @recruits_201601.route('/')
 def recruit_index():
-    return render_template('recruits_contents.html')
+    members = UserProfile.query.limit(4).all()
 
+    return render_template('recruits_contents.html', members=members)
 
-@recruits_201601.route('/profile/upload')
-def recruit_profile_upload():
-    return render_template('profile_upload.html')

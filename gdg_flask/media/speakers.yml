@@ -1,0 +1,587 @@
+-
+  id: 1
+  name: "정유진"
+  company: "Cedar Inc."
+  title: "Co-Founder"
+  bio: "저는 개발과 디자인 모두에 관심이 있고, 게임개발부터 웹개발, 앱개발 등 많은 분야를 경험하고 있습니다. <br>학습과 동시에 많은 기회를 경험할 수 있는 대학생 시기에 '내가 가장 즐길 수 있는 분야' 를 찾는것이 제 20대 목표입니다."
+  thumbnailUrl: yujin.png
+  rockstar: true
+  ribbon:
+    - {abbr: "GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "디미고", title: "한국디지털미디어고등학교", url: "http://dimigo.hs.kr/"}
+    - {abbr: "Start-Up", title: "Cedar Inc. Co-Founder", url: ""}
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+%EC%A0%95%EC%9C%A0%EC%A7%84/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/Gpeddler"}
+
+-
+  id: 2
+  name: "임원균"
+  company: "SW Maestro"
+  title: "5th Trainee"
+  bio: "같이 배우고 성장하며 얻은 것을 다시 나눠주고 싶은 감성적인 안드로이드 개발자. <br> GDG SSU의 Organizer를 맡고 있으며 현재는 휴학하고 SW Maestro의 연수생으로서 공부 중."
+  thumbnailUrl: wonkyun.png
+  rockstar: true
+  ribbon:
+    - {abbr: "GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+    - {abbr: "Null", title: "Null Leader", url: ""}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+WonkyunLim/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/rika0505"}
+    - {name: "linkedin", link: "https://www.linkedin.com/in/corikachu"}
+-
+  id: 3
+  name: "김나연"
+  company: "Evernote"
+  title: "Designer Intern"
+  bio: "새롭고 즐거운 일을 찾아다니는 디자이너."
+  thumbnailUrl: nayeon.png
+  rockstar: true
+  ribbon:
+    - {abbr: "GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "Evernote", title: "Evernote Designer Intern", url: "https://evernote.com/intl/ko/corp/"}
+    - {abbr: "SW Maestro", title: "Software Maestro Power Designer", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+    - {abbr: "MSP", title: "Microsoft Student Partners", url: "http://www.microsoftstudentpartners.com/"}
+    - {abbr: "Take It", title: "Take It Chief Editor", url: ""}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/116357255805228592657/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/nayomee610"}
+
+-
+  id: 4
+  name: "김종찬"
+  company: "GDG Korea Android"
+  title: "Organizer"
+  bio: "한국의 학생 개발자들이 자신의 전공과 개발자의 삶을 사랑하는 나라를 꿈꿉니다. <br><br> 가장 좋아하는 개발 분야는 Android이며 그 이유가 Android밖에 제대로 할 줄 아는게 없어서라는 소문이.. <br><br> 제가 시작한 GDG SSU가 숭실대학교의 모든 인재를 다 포섭하고 소속 자체로도 자랑스러울 수 있는 그런 그룹이 되면 좋겠습니다."
+  thumbnailUrl: jongchan.png
+  rockstar: true
+  ribbon:
+    - {abbr: "GDG Founder", title: "GDG SSU Founder", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "전 GDG Organizer", title: "GDG Korea Android Organizer", url: "https://developers.google.com/groups/chapter/115078626730671785458/"}
+    - {abbr: "Naver", title: "Naver Developer Relations Intern", url: "http://developer.naver.com/wiki/pages/techSupport"}
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+    - {abbr: "디미고", title: "한국디지털미디어고등학교", url: "http://dimigo.hs.kr/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+JongchanKim/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/FlaShilver"}
+    - {name: "github", link: "https://github.com/FlaShilver"}
+
+-
+  id: 5
+  name: "김혜원"
+  company: "LG CTO"
+  title: "Software Engineer Intern"
+  bio: "짱짱 개발자가 되기 위해 삽질중인 삽질쟁이! 현재는 휴학중으로 다양한 활동을 하면서 다방면으로 삽질중입니다.^^"
+  thumbnailUrl: hyewon.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "전 GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "LG", title: "LG CTO Software Engineer Intern", url: "http://www.lge.co.kr/lgekr/company/about/rnd/rnd_institute1.jsp"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+HYEWONKIM/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/0hyewon0"}
+
+-
+  id: 6
+  name: "양준혁"
+  company: "FreeLancer"
+  title: "Software Engineer / Artist"
+  bio: "Here’s to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They’re not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can’t do is ignore them. Because they change things."
+  thumbnailUrl: master_yang.png
+  rockstar: true
+  ribbon:
+    - {abbr: "전 GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+    - {abbr: "BOB", title: "Best of the Best", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/117877205898458369013/posts"}
+
+-
+  id: 7
+  name: "김병우"
+  company: "Linkle Lab"
+  title: "Software Engineer"
+  bio: "http://nslinkle.com/"
+  thumbnailUrl: bwkim.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "전 GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "Linkle", title: "Linkle Lab", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/104394493024265423649/posts"}
+
+-
+  id: 8
+  name: "김남윤"
+  company: "Samsung Software Membership"
+  title: "Software Engineer"
+  bio: "iOS로 프로그래밍을 시작해 Android, System, Desktop App을 거쳐서 Web Programmer로 자리잡아가는 개발자입니다."
+  thumbnailUrl: namyun.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SSM", title: "Samsung Software Membership", url: "http://www.secmem.org/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+%EA%B9%80%EB%82%A8%EC%9C%A4hello/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/yunface"}
+
+-
+  id: 9
+  name: "윤재석 (Jake Yoon)"
+  company: "Samsung"
+  title: "Software Engineer"
+  bio: "현재는 졸업한 GDG SSU의 화석같은 존재입니다. 가끔 출몰하여 치킨 셔틀이 되기도 합니다. 사람을 좋아하여 수 많은 모임들을 주최하고 있습니다. 내년에 결혼한답니다 :)"
+  thumbnailUrl: jakeyoon.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "전 GDG Organizer", title: "GDG SSU Organizer", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "SSM", title: "Samsung Software Membership", url: "http://www.secmem.org/"}
+    - {abbr: "KETI", title: "Researcher at KETI", url: "http://www.keti.re.kr/"}
+    - {abbr: "삼성", title: "삼성전자", url: " "}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+JakeYoon/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/yjaeseok"}
+
+-
+  id: 10
+  name: "김진의"
+  company: "Semicolon"
+  title: "First Leader"
+  bio: "안드로이드 짱짱맨이 되고 싶은 아직은 아무것도 아닌 하지만 배우고 싶은것은 많은 사람!"
+  thumbnailUrl: jinui.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "Semicolon", title: "Semicolon First Leader", url: ""}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/106873256887316154027/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100003469260539"}
+
+-
+  id: 11
+  name: "정찬우"
+  company: "Nooslab"
+  title: "Game Developer"
+  bio: "인디 게임 좋아하는 게임 프로그래머 입니다."
+  thumbnailUrl: chanwu.png
+  rockstar: true
+  ribbon:
+    - {abbr: "애니고", title: "한국애니메이션고등학교", url: "http://www.anigo.or.kr/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/102613305422938742697/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/enghqii"}
+    - {name: "github", link: "https://github.com/enghqii"}
+
+-
+  id: 12
+  name: "정주홍"
+  company: "FreeLancer"
+  title: "Software Engineer/Game Developer"
+  bio: "터프 프로그래머. <br>재밌는 게임으로 세상을 정복하는 그 날까지."
+  thumbnailUrl: juhong.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+    - {abbr: "FreeLancer", title: "Software Engineer/Game Developer", url: ""}
+    - {abbr: "애니고", title: "한국애니메이션고등학교", url: "http://www.anigo.or.kr/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+JeongJuhong/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/voidjuhong"}
+    - {name: "github", link: "growingdever@github.com"}
+    - {name: "site", link: "growingdever.tistroy.com"}
+
+-
+  id: 13
+  name: "권성광"
+  company: "FreeLancer"
+  title: "Software Engineer/Game Developer"
+  bio: "주종목은 게임 개발이지만 서버, 웹 쪽도 가능! <br>언어는 가리지 않지만 C#, Ruby를 좋아합니다.<br>유니티로 게임 개발하다가 최근에는 MonoGame의 매력에 빠졌습니다.<br>지금은 바쁘지만 언젠가 MonoGame을 이용해서 꼭 출시까지 해보고 싶네요.<br>그리고 실력이 부족한 리듬게임 이용자입니다. (커뮤니티는 안해요.)<br>친구 및 라이벌 등록 환영합니다~"
+  thumbnailUrl: sunggwang.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+    - {abbr: "애니고", title: "한국애니메이션고등학교", url: "http://www.anigo.or.kr/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/112739680351483655407/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/seonggwang.gwon"}
+    - {name: "github", link: "https://github.com/seonggwang"}
+    - {name: "site", link: "http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=mypage&playerid=84406"}
+    - {name: "site", link: "https://osu.ppy.sh/u/364027"}
+
+-
+  id: 14
+  name: "김원재"
+  company: "이음소시어스"
+  title: "Software Engineer"
+  bio: "스파게티 코드를 짜고 자기전에 이불킥을 날리고 다음날 예쁘게 짭니다."
+  thumbnailUrl: wonjae.png
+  rockstar: true
+  ribbon:
+    - {abbr: "이음", title: "이음소시어스 Software Developer", url: "http://www.i-um.com/help/home.ium"}
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/homepage/default/page/subLocation.do?menu_no=20010202&up_menu_no=200102"}
+    - {abbr: "디미고", title: "한국디지털미디어고등학교", url: "http://dimigo.hs.kr/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/103044272637020404296/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/akkiros"}
+
+-
+  id: 15
+  name: "정한터"
+  company: "SW Maestro"
+  title: "Software Engineer"
+  bio: "영상 / 디자인 / 프로그래밍 / 미디어아트 분야 불문 다양하게 다 건드려본 개자이너입니다! 그래도 주종목은 Java와 Android.<br>잡다하게 해본거도 많고 하고싶은 것도 많지만 아직 갈 길에 대해 갈피를 잡지 못하는 방랑자ㅠㅠ <br>프로그래머로써 정말 하고싶고 정말 내게 맞는 분야를 찾고, 그곳에서 최고가 되고 싶습니다."
+  thumbnailUrl: hanter.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+    - {abbr: "Ewha App Center", title: "Ewha App Center Android Master", url: "http://www.ewhappcenter.com/xe/page_HMnv41"}
+    - {abbr: "SSIZEN.NET", title: "SSIZEN.NET Web Content Manager", url: "http://ssizen.net/home/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+HanterJung/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/hanterjung"}
+
+-
+  id: 16
+  name: "최아연"
+  company: "Soongsil University"
+  title: "Junior"
+  bio: "안드로이드 개발 합니다. <br>안드로이드 웨어 개발 합니다. <br> 안드로이드 입니다."
+  thumbnailUrl: zinc.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "최강 잉여!", title: "GDG 최강 잉여!", url: "http://1.bp.blogspot.com/-0F16V2lGiqA/T7B1SBjWjGI/AAAAAAAAAA8/GShQr0cCI-A/s1600/z_sel9633.jpg"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/110789471097776893712/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100003381701052"}
+
+-
+  id: 17
+  name: "김성우"
+  company: "KBeat.net"
+  title: "Technical Artist / CTO"
+  bio: "서정적인 힐링 게임을 만드는게 목표. 개발자지만 사실 디자이너."
+  thumbnailUrl: seongwoo.png
+  rockstar: true
+  ribbon:
+    - {abbr: "디미고", title: "한국디지털미디어고등학교", url: "http://dimigo.hs.kr/"}
+    - {abbr: "Start-Up", title: "KBeat.net CTO", url: "https://www.facebook.com/kbeat.net"}
+    - {abbr: "Start-Up", title: "Zarpar Producer", url: "https://www.facebook.com/pages/Zarpar/139616116208535"}
+
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100001873083257"}
+
+-
+  id: 18
+  name: "이경문"
+  company: "SW Maestro"
+  title: "5th Trainee"
+  bio: "삼인행 필유아사언. <br> 행복을 너무 연기하진 말자. <br> 안드로이드 개발자로 이에 대해 더 깊이 있는 실력을 갖추고자 합니다."
+  thumbnailUrl: kyoungmun.png
+  rockstar: true
+  ribbon:
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/114636467154744608737/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/thenwasthetime"}
+
+-
+  id: 19
+  name: "조선미"
+  company: "LG CTO"
+  title: "Software Engineer Intern"
+  bio: "햇빛 싫어하고 코딩모임, 탁구, 수영, 부대찌개, 산책, 알콜, 쵸비츠 등 이것저것 좋아하는 잉여입니다. <br>어두운 기운을 발산하지만 사람들과 함께하는걸 좋아하고, 가장 중요한 것은 인간관계라고 생각합니다.<br>대학생활중 여러 활동을 하며 함께하는분들과 좋은 시간을 보내면 좋겠습니다."
+  thumbnailUrl: sunmi.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "LG", title: "LG CTO Software Engineer Intern", url: "http://www.lge.co.kr/lgekr/company/about/rnd/rnd_institute1.jsp"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/102299588654801345044/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/iloveloop"}
+
+-
+  id: 20
+  name: "안혜미"
+  company: "Microsoft Student Partners"
+  title: "8th Developer"
+  bio: "GDG SSU에서는 Operator와 단신을 담당하고 있습니다.<br>생활신조는 No Jam Yes Stress 입니다. <br>Android를 공부하고 있지만 분야에 상관없이 재미있는 것을 만들고 싶습니다.<br>좋아하는 것 : 영화관 <br>못하는 것 : 일찍 일어나기 <br>습관 : 'v' "
+  thumbnailUrl: hyemi.png
+  rockstar: true
+  ribbon:
+    - {abbr: "MSP", title: "Microsoft Student Partners", url: "http://www.microsoftstudentpartners.com/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/+HyemiAhn/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/hyemi.ahn.12"}
+
+-
+  id: 21
+  name: "장석성"
+  company: "Soongsil University"
+  title: "Sophomore"
+  bio: "안녕하세요 꿈과 목표가 있지만, 진정 하고싶은 것을 찾지 못한 대학생입니다. <br>그 답을 찾고자, 부족한 점을 채우고자 분야를 막론한 새로운 도전, 새로운 만남을 즐깁니다. <br>여행, 봉사활동, 인턴등 재미있는 무엇인가가 있다면, 함께 하고 싶으시다면 언제든지 연락주세요."
+  thumbnailUrl: suksung.png
+  rockstar: true
+  ribbon:
+    - {abbr: "COO", title: "LOL Chief Order Operator", url: "http://www.op.gg/summoner/userName=%EC%8B%A4%EB%B2%84%EC%BA%A1%ED%8B%B4%EC%9D%80%EB%B9%9B%EC%84%9D%EC%84%B1"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/115500377181457842336/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/j4tune4u"}
+
+-
+  id: 22
+  name: "박규환 (치즈군★)"
+  company: "Seoul.pm"
+  title: "Software Engineer"
+  bio: "안녕하세요. 초보 개발자 치즈군★입니다. <br>모두에게 도움이 될 수 있는 것을 만들어 나가기 위해 열심히 배워나가고 있습니다. <br>가장 좋아하는 언어는 Perl입니다. Perl6 파이팅! 서울 펄 몽거스 파이팅! GDG SSU도 파이팅 XDD"
+  thumbnailUrl: gyuhwan.png
+  rockstar: true
+  ribbon:
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/+GyuhwanPark/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/the.unstabler"}
+
+-
+  id: 23
+  name: "이상혁"
+  company: "국방부"
+  title: "Army / 인간병기 / 각종 무술 유단자"
+  bio: "고등학생 때 해커로서 꿈을 키워왔지만 방향을 못잡아 코딩만 할줄 아는 나라지키는 군인 이상혁입니다.<br>나라를 위해 한몸 바치고 있지만 이 기회를 이용해서 진정한 해커가 되어 사회에 진출할것입니다. <br>개발 분야 : Android, Web, Backend"
+  thumbnailUrl: sangheck.png
+  rockstar: true
+  ribbon:
+    - {abbr: "Army", title: "국방부 인간병기", url: "http://www.mnd.go.kr/mbshome/mbs/mnd/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/114675959330890991359/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/lee.sanghyeok.94"}
+
+-
+  id: 24
+  name: "제설아"
+  company: "Security Circle UNLOCK"
+  title: "Adviser"
+  bio: "순간을 지배하는 사람이 인생을 지배한다 . - Eschenbach"
+  thumbnailUrl: seolah.png
+  rockstar: true
+  ribbon:
+    - {abbr: "BOB", title: "Best of the Best", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "UNLOCK", title: "UNLOCK Adviser", url: "https://developers.google.com/groups/chapter/100263126816983481169/"}
+    - {abbr: "선린", title: "선린인터넷미디어고등학교", url: "http://www.sunrint.hs.kr/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/108766571119428854220/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/seolah.je"}
+
+-
+  id: 25
+  name: "위가혜"
+  company: "Soongsil University"
+  title: "Junior"
+  bio: "사람간의 인연을 좋아하는 위가혜입니다. <br>그림을 좋아하는 개발자로 후에 햅틱스를 연동한 시뮬게임을 만드는게 목표입니다. <br>언제나 행복하게 살기가 제 모토입니다."
+  thumbnailUrl: gahye.png
+  rockstar: true
+  ribbon:
+    - {abbr: "Mentor", title: "Mathematics & Algorism Mentor", url: ""}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/106448405761062464521/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100004764933744"}
+
+-
+  id: 26
+  name: "이희덕 (희희덕덕)"
+  company: "Line+"
+  title: "Software Engineer Intern"
+  bio: "사용자의 불편함을 풀어주는 개발자를 꿈꾸는 사람. <br>유세윤을 개발했다고 하면 어떻게 사는걸 꿈꾸는지 잘 알겠지...?"
+  thumbnailUrl: heeduck.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SW Maestro", title: "Software Maestro", url: "http://www.swmaestro.kr/"}
+    - {abbr: "Google", title: "Google Korea Intern", url: "https://www.google.co.kr/intl/ko/about/"}
+    - {abbr: "Microsoft", title: "Microsoft Korea Intern", url: "http://www.microsoft.com/ko-kr/about/default.aspx"}
+    - {abbr: "Line+", title: "LINE+ Intern", url: "http://linecorp.com/en/"}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/111915147504097527416/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/heedeok.lee"}
+    - {name: "site", link: "http://lhd1413.sshel.com/profile/index.htm"}
+
+-
+  id: 27
+  name: "방한미루"
+  company: "KETI"
+  title: "Contract Researcher (Unity 3D)"
+  bio: "본업은 웹 프로그래머... 부업은 게임 프로그래머... 장래희망 서비스 만드는사람. 다양한 관심만 많아요.<br>UX같은 분야도 관심만 많고...<br>현재 알고리즘과 자료구조 열심히 공부중입니다."
+  thumbnailUrl: hanmilu.png
+  rockstar: true
+  ribbon:
+    - {abbr: "KETI", title: "Contract Researcher at KETI", url: "http://www.keti.re.kr/"}
+    - {abbr: "MSP", title: "Microsoft Student Partners", url: "http://www.microsoftstudentpartners.com/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/107649107100366460737/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/luis.hanmilu"}
+
+-
+  id: 28
+  name: "김대경"
+  company: "Samsung Software Membership"
+  title: "Software Engineer"
+  bio: "시스템프로그래밍이 전문 분야입니다. 이 분야를 연구실에서 공부하고있으며 다양한 분야를 경험하기 위해 삼성소프트웨어멤버십에서 연수를 받고 있습니다.<br>대학생은 인생에 있어 가장 선택의 여지가 가장 많은 신분이라고 할 수 있습니다. 그 선택에 있어 후회없는 선택을 하려고 노력합니다.<br>어차피, 대충, 그냥이란 단어를 안쓰는 사람이 되고 싶습니다."
+  thumbnailUrl: daekyoung.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "SSM", title: "Samsung Software Membership", url: "http://www.secmem.org/"}
+    - {abbr: "Labs", title: "Network Computing Labs", url: ""}
+
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/110977204323768873654/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/netforce2"}
+
+-
+  id: 29
+  name: "김미현"
+  company: "Samsung sGen Club"
+  title: "4th developer"
+  bio: "웹개발에 관심이 있어서 공부중이예요. 영차영차~ <br>새로운 경험을 중요시하며 도전하고 즐기면서 살고싶어요. 내존재 화이팅 >.<"
+  thumbnailUrl: mihyeon.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "sGen", title: "Samsung sGen Club", url: "http://www.sgenclub.com/"}
+  social:
+    - {name: "google-plus", link: "https://plus.google.com/u/0/109408578967066443022/posts"}
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100002144397171"}
+
+-
+  id: 30
+  name: "이도예"
+  company: "Soongsil University"
+  title: "Junior"
+  bio: " "
+  thumbnailUrl: doyee.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "나는..", title: "나는 나다!", url: "http://book.daum.net/detail/book.do?bookid=BOK00010954397BA"}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/profile.php?id=100003455726873&fref=ts"}
+
+-
+  id: 31
+  name: "정진규"
+  company: "Soongsil University"
+  title: "Junior"
+  bio: "마냥 컴퓨터가 좋아서 이것 저것 배우는 것이 취미. <br>욕심이 많아서 일을 많이 벌려놓고 감당하기 힘들어하는 것이 특기."
+  thumbnailUrl: jingyu.png
+  rockstar: true
+  ribbon:
+    - {abbr: "NCLab 인턴", title: "Network Computing Labs", url: "http://book.daum.net/detail/book.do?bookid=BOK00010954397BA"}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/jingyu.jeong.140?fref=ts"}
+
+-
+  id: 32
+  name: "손민정"
+  company: "Soongsil University"
+  title: "Senior"
+  bio: "웹쪽에 관심이 많아 Python(Flask), 진짜 좋은 Jinja2와 Javascript 등을 차차 공부할 계획입니다. <br>최종 산출물로는 GDG Homepage를 제작하는 것입니다.(공사 중단됨) <br>GDG 내에서 상당히 나이많은 축에 속하지만 마음만은 20살이고 싶습니다. <br>나. 4학년. 화이팅. 성공적"
+  thumbnailUrl: minjung.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "GDG 여신", title: "자타공인 GDG 여신", url: " "}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/GODofMJ"}
+
+-
+  id: 33
+  name: "양홍일"
+  company: "UKOV Chief"
+  title: "UKOV 11대 단장"
+  bio: "아직 21살, 2학년이지만 개자이너가 되기 위해 매일매일 <br>열심히 회색화면에 고운 코드를 새겨나가는 양홍일입니다! <br>개발, 디자인 이외에도 사진이랑 영상에도 관심이 많으니 혹여 저와 관심사가 같다면…# <br>헤헤 창업하고싶다!"
+  thumbnailUrl: hongil.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "UKOV Chief", title: "UKOV 11대 단장", url: ""}
+    - {abbr: "홍스패치", title: "홍스패치 악덕사진사", url: "https://www.facebook.com/hongspatch?fref=ts"}
+    - {abbr: "영상고", title: "서울영상고등학교", url: ""}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/histedit.1126?fref=ts"}
+
+-
+  id: 34
+  name: "조영준"
+  company: "Soongsil University"
+  title: "Senior"
+  bio: "안녕하세요 저는 뒤늦게 <br>컴퓨터가 좋아져서 공부를 하고 있는 학생입니다. 하고 싶은게 많아서 좋지만 몸이 하나라서 아쉽습니다. <br>사람만나는 것을 좋아해 이런 저런 활동하며 재미있게 보내고 있습니다. <br>취미로 자전거를 타며, 종종 배트민턴, 축구를 합니다. 관심있는 분야는 로봇, 인공지능 입니다. 홧팅!"
+  thumbnailUrl: youngjun.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "MSP", title: "Microsoft Student Partners", url: ""}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/youngjoon.jo89?fref=ts"}
+
+-
+  id: 35
+  name: "강주희"
+  company: "Best of Best"
+  title: "Mentee"
+  bio: "보안과 개발, 두 분야에 관심이 많지만, 둘다 초보인 강주희입니다. 작년 12월 BOB 3기를 수료하였고 지금도 보안 공부는 ING 중입니다. 개발도 공부를 하고 있지만, 아직까지 잘하진 못해요.... 웹쪽 프로젝트를 한 번 해보았기 때문에 그런지 웹에 관심많고 공부하고 있습니다! 잘부탁드립니다!!"
+  thumbnailUrl: juhee.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "BOB", title: "Best Of Best", url: "https://www.facebook.com/kitri.bob"}
+    - {abbr: "선린고", title: "선린인터넷고등학교", url: ""}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/kang.juhee.961"}
+    - {name: "google-plus", link: "https://plus.google.com/113246603473485716192/about"}
+
+-
+  id: 36
+  name: "김수연"
+  company: "디자이너"
+  title: "허당"
+  bio: "디자인을 좋아하고 즐겨합니다. 요즘은 웹디자인에 관심이 많아 작은것부터 차근차근 공부하고 있습니다. "
+  thumbnailUrl: suyeon.jpg
+  rockstar: true
+  ribbon:
+    - {abbr: "허당", title: "허당 디자이너", url: ""}
+  social:
+    - {name: "facebook", link: "https://www.facebook.com/suyeon.kim.50?fref=ts"}
+
+-
+  id: 37
+  name: "허경영"
+  company: "Soongsil University"
+  title: "Freshman"
+  bio: " "
+  thumbnailUrl: kyungyoung.jpg
+  rockstar: true
+
+-
+  id: 38
+  name: "이가은"
+  company: "Soongsil University"
+  title: "Sophomore"
+  bio: " "
+  thumbnailUrl: kaeun.jpg
+  rockstar: true
+  ribbon:
+   - {abbr: "디미고", title: "한국디지털미디어고등학교", url: "http://dimigo.hs.kr/"}
+
+-
+  id: 39
+  name: "강경완"
+  company: "Soongsil University"
+  title: "Sophomore"
+  bio: "쩌는 개발자가 되기 위해 열심히 노력중인 강경완입니다...! <br>주 개발분야는 Android 지만, 다양한 경험을 해보고 싶어요! <br>GDG 다른 분들의 소마 타이틀이 부럽네요 ㅠㅠ"
+  thumbnailUrl: kyeongwan.jpg
+  rockstar: true
+  ribbon:
+   - {abbr: "올입사", title: "올입사 CEO", url: "http://allipsa.co.kr/"}
+  social:
+   - {name: "facebook", link: "https://www.facebook.com/kyeongwan.k"}

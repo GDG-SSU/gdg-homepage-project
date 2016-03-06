@@ -7,58 +7,63 @@
             <p>우리는 GDG SSU입니다</p>
         </div>
         <div id="row">
-            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="200ms">
-                <div class="thumbnail"> <img src="{{ url_for('recruits_201601.static', filename='images/member/ys_image.png') }}" alt="..." class="img-circle team-img">
-                    <div class="caption">
-                        <h3>신윤수</h3>
-                        <p>GDG SSU 2015 Developer</p>
-                        <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/younsoo.shin.18"><i class="fa fa-facebook"></i></a></li>
-                            {#                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
+            {% for member in members %}
+                <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="200ms">
+                    <div class="thumbnail"> <img src="{{ url_for('get_profile', profilename=member.picture) }}" alt="..." class="img-circle team-img">
+                        <div class="caption">
+                            <h3>{{ member.name }}</h3>
+
+                            <p>GDG SSU 2015 Developer</p>
+                            <ul class="list-inline">
+                                {% for social in member.socials %}
+                                        <li><a href="{{ social.link }}" target="_blank">
+                                            <i class="fa {% if social.name == 'facebook' %}fa-facebook {% elif social.name == 'google-plus' %} fa-google-plus {% elif social.name == 'github' %} fa-github {% endif %}"></i>
+                                        </a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="400ms">
-                <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
-                    <div class="caption">
-                        <h3>이가은</h3>
-                        <p>GDG SSU 2016 Orgarnizer</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="600ms">
-                <div class="thumbnail"> <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
-                    <div class="caption">
-                        <h3>강경완</h3>
-                        <p>GDG SSU 2016 Orgarnizer</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="800ms">
-                <div class="thumbnail"> <img src="img/team/04.jpg" alt="..." class="img-circle team-img">
-                    <div class="caption">
-                        <h3>김나연</h3>
-                        <p>GDG SSU 2015 Orgarnizer</p>
-                        <ul class="list-inline">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+            {#            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="400ms">#}
+            {#                <div class="thumbnail"> <img src="img/team/02.jpg" alt="..." class="img-circle team-img">#}
+            {#                    <div class="caption">#}
+            {#                        <h3>이가은</h3>#}
+            {#                        <p>GDG SSU 2016 Orgarnizer</p>#}
+            {#                        <ul class="list-inline">#}
+            {#                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="600ms">#}
+            {#                <div class="thumbnail"> <img src="img/team/03.jpg" alt="..." class="img-circle team-img">#}
+            {#                    <div class="caption">#}
+            {#                        <h3>강경완</h3>#}
+            {#                        <p>GDG SSU 2016 Orgarnizer</p>#}
+            {#                        <ul class="list-inline">#}
+            {#                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="col-md-3 col-sm-6 team wow fadeInUp" data-wow-delay="800ms">#}
+            {#                <div class="thumbnail"> <img src="img/team/04.jpg" alt="..." class="img-circle team-img">#}
+            {#                    <div class="caption">#}
+            {#                        <h3>김나연</h3>#}
+            {#                        <p>GDG SSU 2015 Orgarnizer</p>#}
+            {#                        <ul class="list-inline">#}
+            {#                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>#}
+            {#                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>#}
+            {#                        </ul>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
         </div>
         <div>
             <div>
