@@ -56,5 +56,6 @@ Flask_Classy.egg-info/*
 .DS_Store
 
 sample
+recruits_2016_01/python_modules
 
 docs/_build*
